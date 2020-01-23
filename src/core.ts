@@ -28,7 +28,7 @@ class SiteMapper {
   sitemapTag: string;
 
   sitemapUrlSet: string;
-  
+
   nextConfig: any;
 
   targetDirectory: string;
@@ -61,10 +61,10 @@ class SiteMapper {
     this.sitemapStylesheet = sitemapStylesheet || []
     this.sitemapTag = `<?xml version="1.0" encoding="UTF-8"?>`
     this.sitemapUrlSet = `
-      <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
-      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+      <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xhtml="http://www.w3.org/1999/xhtml">
       `
 
@@ -230,7 +230,7 @@ class SiteMapper {
         changefreq = `<changefreq>${url.changefreq}</changefreq>`
       }
 
-      const xmlObject = `<url><loc>${this.baseUrl}${url.outputPath}</loc>
+      const xmlObject = `<url><loc>${this.baseUrl}${pagePath}/</loc>
                 ${alternates}
                 ${priority}
                 ${changefreq}
