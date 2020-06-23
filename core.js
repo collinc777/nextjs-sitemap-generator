@@ -162,7 +162,7 @@ class SiteMapper {
             if (url.changefreq) {
                 changefreq = `<changefreq>${url.changefreq}</changefreq>`;
             }
-            const xmlObject = `<url><loc>${this.baseUrl}${pagePath}/</loc>
+            const xmlObject = `<url><loc>${this.baseUrl}${url.outputPath}/</loc>
                 ${alternates}
                 ${priority}
                 ${changefreq}
